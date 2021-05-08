@@ -1,0 +1,351 @@
+import Head from "next/head";
+import Image from "next/image";
+
+import SingleCard from "../components/SingleCard";
+import Seo from "../components/seo";
+import { fetchAPI } from "../lib/api";
+
+const Home = ({ categories, homepage }) => {
+  console.log(categories, homepage);
+  const HTMLArticle = categories[1].articles.slice(-1)[0];
+  const CSSArticle = categories[0].articles.slice(-1)[0];
+  const JavaScriptArticle = categories[2].articles.slice(-1)[0];
+
+  return (
+    <>
+      <Head>
+        <title>thejuniorwebdev</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Seo seo={homepage.seo} />
+      <main>
+        <div className="bg-gray-100">
+          <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 md:h-128 md:py-16 md:flex-row md:items-center md:space-x-6 ">
+            <div className=" w-full md:w-1/2">
+              <div className="max-w-lg">
+                <h1 className="text-2xl font-medium tracking-wide text-gray-800 dark:text-white md:text-4xl">
+                  Beginner tutorials in HTML, CSS, JavaScript, React and
+                  Wordpress.
+                </h1>
+                <div className="grid gap-6 mt-8 sm:grid-cols-2">
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>HTML</span>
+                  </div>
+
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>CSS</span>
+                  </div>
+
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>JavaScript</span>
+                  </div>
+
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>React</span>
+                  </div>
+
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>Wordpress</span>
+                  </div>
+
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>And more!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center w-full h-96 md:w-1/2">
+              <Image
+                className="object-cover w-full h-full max-w-2xl rounded-md"
+                src="/programming.jpg"
+                alt="programming photo"
+                height="426"
+                width="640"
+              />
+            </div>
+          </div>
+        </div>
+        <section className=" container mx-auto flex flex-wrap lg:py-12 lg:flex">
+          <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
+            <Image
+              className="object-cover w-full h-56"
+              src="/html.jpg"
+              alt="html"
+              height="426"
+              width="640"
+            />
+
+            <div className="py-5 text-center">
+              <a
+                href="#"
+                className="block text-2xl font-bold text-gray-800 dark:text-white"
+              >
+                HTML
+              </a>
+              <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+                Browse Guides
+              </button>
+            </div>
+          </div>
+          <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
+            <Image
+              className="object-cover w-full h-56"
+              src="/css.jpg"
+              alt="css"
+              height="426"
+              width="640"
+            />
+
+            <div className="py-5 text-center">
+              <a
+                href="#"
+                className="block text-2xl font-bold text-gray-800 dark:text-white"
+              >
+                CSS
+              </a>
+              <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+                Browse Guides
+              </button>
+            </div>
+          </div>
+          <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
+            <Image
+              className="object-cover w-full h-56"
+              src="/javascript.jpg"
+              alt="css"
+              height="426"
+              width="640"
+            />
+
+            <div className="py-5 text-center">
+              <a
+                href="#"
+                className="block text-2xl font-bold text-gray-800 dark:text-white"
+              >
+                JavaScript
+              </a>
+              <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+                Browse Guides
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gray-100 dark:bg-gray-900  ">
+          <div className="container mx-auto lg:flex lg:justify-center flex flex-col px-6 pb-6">
+            <div className="py-6">
+              <h2 className="text-3xl font-bold text-gray-800">Latest Posts</h2>
+            </div>
+            <div className="flex flex-wrap">
+              <SingleCard
+                tech="HTML"
+                title={HTMLArticle.title}
+                description={HTMLArticle.description}
+                colour="blue"
+                slug={`/html/${HTMLArticle.slug}`}
+              />
+              <SingleCard
+                tech="CSS"
+                title={CSSArticle.title}
+                description={CSSArticle.description}
+                colour="yellow"
+                slug={`/css/${CSSArticle.slug}`}
+              />
+              <SingleCard
+                tech="JavaScript"
+                title={JavaScriptArticle.title}
+                description={JavaScriptArticle.description}
+                colour="red"
+                slug={`/javascript/${JavaScriptArticle.slug}`}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white dark:bg-gray-800">
+          <div className="container px-6 py-8 mx-auto">
+            <div className="items-center lg:flex">
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+                  About Me
+                </h2>
+
+                <p className="mt-4 text-gray-500 dark:text-gray-400 lg:max-w-md">
+                  Hello, my name is Dan and i'm a Junior Developer based in the
+                  UK. This website will be full of helpful tutorials and posts
+                  about the latest tech trends, helping you getting a kickstart
+                  in a career i'm so passionate about.
+                </p>
+
+                <div className="flex items-center mt-6 -mx-2">
+                  <a
+                    className="mx-2"
+                    href="https://mobile.twitter.com/DanMartin7"
+                    aria-label="Twitter"
+                    target="_blank"
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z" />
+                    </svg>
+                  </a>
+
+                  <a
+                    className="mx-2"
+                    href="https://www.linkedin.com/in/daniel-martin-025756137/"
+                    aria-label="Linkden"
+                    target="_blank"
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z" />
+                    </svg>
+                  </a>
+
+                  <a
+                    className="mx-2"
+                    href="https://github.com/DanielMartin96"
+                    aria-label="Github"
+                    target="_blank"
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9 1.4.3 2.6.4 3.8.4 8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1-8.4 1.9-15.9 2.7-22.6 2.7-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1 10.5 0 20-3.4 25.6-6 2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8 0 0 1.6-.5 5-.5 8.1 0 26.4 3.1 56.6 24.1 17.9-5.1 37-7.6 56.1-7.7 19 .1 38.2 2.6 56.1 7.7 30.2-21 48.5-24.1 56.6-24.1 3.4 0 5 .5 5 .5 12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5 1.2 0 2.6-.1 4-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-8 lg:mt-0 lg:w-1/2">
+                <div className="flex items-center justify-center lg:justify-end">
+                  <div className="max-w-lg">
+                    <img
+                      className="object-cover object-center w-full h-64 rounded-md shadow"
+                      src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+};
+
+export async function getStaticProps() {
+  // Run API calls in parallel
+  const [categories, homepage] = await Promise.all([
+    fetchAPI("/categories"),
+    fetchAPI("/homepage"),
+  ]);
+
+  return {
+    props: { categories, homepage },
+    revalidate: 1,
+  };
+}
+
+export default Home;
