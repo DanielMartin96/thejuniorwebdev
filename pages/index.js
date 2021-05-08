@@ -7,8 +7,8 @@ import { fetchAPI } from "../lib/api";
 
 const Home = ({ categories, homepage }) => {
   console.log(categories, homepage);
-  const HTMLArticle = categories[1].articles.slice(-1)[0];
-  const CSSArticle = categories[0].articles.slice(-1)[0];
+  const HTMLArticle = categories[0].articles.slice(-1)[0];
+  const CSSArticle = categories[1].articles.slice(-1)[0];
   const JavaScriptArticle = categories[2].articles.slice(-1)[0];
 
   return (

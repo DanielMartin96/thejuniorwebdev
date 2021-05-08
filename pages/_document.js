@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=GTM-5SMNSJX"
+            src="https://www.googletagmanager.com/gtag/js?id=G-RRHZR0QKQF"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'GTM-5SMNSJX	', {
+            gtag('config', 'G-RRHZR0QKQF', {
               page_path: window.location.pathname,
             });
           `,

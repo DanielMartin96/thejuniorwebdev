@@ -2,8 +2,8 @@ import SingleCard from "../../components/SingleCard";
 import { fetchAPI } from "../../lib/api";
 
 const GuidePage = ({ categories }) => {
-  const HTML = categories[1].articles;
-  const CSS = categories[0].articles;
+  const HTML = categories[0].articles;
+  const CSS = categories[1].articles;
   const JS = categories[2].articles;
 
   return (
