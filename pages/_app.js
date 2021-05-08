@@ -6,7 +6,7 @@ import "tailwindcss/tailwind.css";
 import Layout from "../components/layout/Layout";
 import { createContext } from "react";
 import { fetchAPI } from "../lib/api";
-import * as ga from "../lib/ga";
+import * as gtag from "../lib/gtag";
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      ga.pageview(url);
+      gtag.pageview(url);
     };
     //When the component is mounted, subscribe to router changes
     //and log those page views
