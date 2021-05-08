@@ -23,7 +23,7 @@ const GuidePage = ({ categories }) => {
               title={article.title}
               description={article.description}
               key={article.id}
-              slug={`'/html/${article.slug}`}
+              slug={`html/${article.slug}`}
             />
           );
         })}
@@ -43,7 +43,7 @@ const GuidePage = ({ categories }) => {
               title={article.title}
               description={article.description}
               key={article.id}
-              slug={`'/css/${article.slug}`}
+              slug={`css/${article.slug}`}
             />
           );
         })}
@@ -63,7 +63,7 @@ const GuidePage = ({ categories }) => {
               title={article.title}
               description={article.description}
               key={article.id}
-              slug={`'/javascript/${article.slug}`}
+              slug={`javascript/${article.slug}`}
             />
           );
         })}
