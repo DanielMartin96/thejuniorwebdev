@@ -21,7 +21,7 @@ const SingleCard = ({ tech, title, description, colour, slug }) => {
           </h1>
 
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-            {description.substring(0, 300) + "..."}
+          {description}
           </p>
         </div>
       </div>

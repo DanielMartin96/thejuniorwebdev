@@ -1,23 +1,46 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import SingleCard from "../components/SingleCard";
-import Seo from "../components/seo";
+import BrowseGuideCard from "../components/HomePage/BrowseGuideCard";
+import ArticleCard from "../components/HomePage/ArticleCard";
 import { fetchAPI } from "../lib/api";
 
-const Home = ({ categories, homepage }) => {
-  console.log(categories, homepage);
-  const HTMLArticle = categories[0].articles.slice(-1)[0];
-  const CSSArticle = categories[1].articles.slice(-1)[0];
-  const JavaScriptArticle = categories[2].articles.slice(-1)[0];
+const guides = [
+  {
+    name: "JavaScript",
+    src: "/javascript.jpg",
+    alt: "javascript",
+  },
+  {
+    name: "CSS",
+    src: "/css.jpg",
+    alt: "css",
+  },
+  {
+    name: "MongoDB",
+    src: "/mongodb.gif",
+    alt: "javascript",
+  },
+  {
+    name: "Express",
+    src: "/express.png",
+    alt: "express",
+  },
+  {
+    name: "React",
+    src: "/react.png",
+    alt: "react",
+  },
+];
 
+const Home = ({ articles }) => {
   return (
     <>
       <Head>
         <title>thejuniorwebdev</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Seo seo={homepage.seo} />
+
       <main>
         <div className="bg-gray-100">
           <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 md:h-128 md:py-16 md:flex-row md:items-center md:space-x-6 ">
@@ -44,7 +67,7 @@ const Home = ({ categories, homepage }) => {
                       />
                     </svg>
 
-                    <span>HTML</span>
+                    <span>JavaScript</span>
                   </div>
 
                   <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
@@ -82,7 +105,26 @@ const Home = ({ categories, homepage }) => {
                       />
                     </svg>
 
-                    <span>JavaScript</span>
+                    <span>MongoDB</span>
+                  </div>
+
+                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                    <svg
+                      className="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+
+                    <span>Express</span>
                   </div>
 
                   <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
@@ -120,26 +162,7 @@ const Home = ({ categories, homepage }) => {
                       />
                     </svg>
 
-                    <span>Wordpress</span>
-                  </div>
-
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>And more!</span>
+                    <span>Node.js</span>
                   </div>
                 </div>
               </div>
@@ -156,99 +179,27 @@ const Home = ({ categories, homepage }) => {
             </div>
           </div>
         </div>
+
         <section className=" container mx-auto flex flex-wrap lg:py-12 lg:flex">
-          <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
-            <Image
-              className="object-cover w-full h-56"
-              src="/html.jpg"
-              alt="html"
-              height="426"
-              width="640"
-            />
-
-            <div className="py-5 text-center">
-              <a
-                href="#"
-                className="block text-2xl font-bold text-gray-800 dark:text-white"
-              >
-                HTML
-              </a>
-              <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
-                Browse Guides
-              </button>
-            </div>
-          </div>
-          <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
-            <Image
-              className="object-cover w-full h-56"
-              src="/css.jpg"
-              alt="css"
-              height="426"
-              width="640"
-            />
-
-            <div className="py-5 text-center">
-              <a
-                href="#"
-                className="block text-2xl font-bold text-gray-800 dark:text-white"
-              >
-                CSS
-              </a>
-              <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
-                Browse Guides
-              </button>
-            </div>
-          </div>
-          <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
-            <Image
-              className="object-cover w-full h-56"
-              src="/javascript.jpg"
-              alt="css"
-              height="426"
-              width="640"
-            />
-
-            <div className="py-5 text-center">
-              <a
-                href="#"
-                className="block text-2xl font-bold text-gray-800 dark:text-white"
-              >
-                JavaScript
-              </a>
-              <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
-                Browse Guides
-              </button>
-            </div>
-          </div>
+          {guides.map((guide) => (
+            <BrowseGuideCard guide={guide} key={guide.name} />
+          ))}
         </section>
 
         <section className="bg-gray-100 dark:bg-gray-900  ">
           <div className="container mx-auto lg:flex lg:justify-center flex flex-col px-6 pb-6">
             <div className="py-6">
-              <h2 className="text-3xl font-bold text-gray-800">Latest Posts</h2>
+              <h2 className=" underline text-3xl font-bold text-gray-800">
+                Latest Posts
+              </h2>
             </div>
             <div className="flex flex-wrap">
-              <SingleCard
-                tech="HTML"
-                title={HTMLArticle.title}
-                description={HTMLArticle.description}
-                colour="blue"
-                slug={`/html/${HTMLArticle.slug}`}
-              />
-              <SingleCard
-                tech="CSS"
-                title={CSSArticle.title}
-                description={CSSArticle.description}
-                colour="yellow"
-                slug={`/css/${CSSArticle.slug}`}
-              />
-              <SingleCard
-                tech="JavaScript"
-                title={JavaScriptArticle.title}
-                description={JavaScriptArticle.description}
-                colour="red"
-                slug={`/javascript/${JavaScriptArticle.slug}`}
-              />
+              {articles
+                .slice(Math.max(articles.length - 3, 0))
+                .reverse()
+                .map((article) => (
+                  <ArticleCard article={article} key={article.title} />
+                ))}
             </div>
           </div>
         </section>
@@ -319,10 +270,12 @@ const Home = ({ categories, homepage }) => {
               <div className="mt-8 lg:mt-0 lg:w-1/2">
                 <div className="flex items-center justify-center lg:justify-end">
                   <div className="max-w-lg">
-                    <img
+                    <Image
+                      src="/me.jpeg"
+                      alt="dan"
+                      width="250px"
+                      height="250px"
                       className="object-cover object-center w-full h-64 rounded-md shadow"
-                      src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                      alt=""
                     />
                   </div>
                 </div>
@@ -337,13 +290,10 @@ const Home = ({ categories, homepage }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [categories, homepage] = await Promise.all([
-    fetchAPI("/categories"),
-    fetchAPI("/homepage"),
-  ]);
+  const articles = await fetchAPI("/articles");
 
   return {
-    props: { categories, homepage },
+    props: { articles },
     revalidate: 1,
   };
 }

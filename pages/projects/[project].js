@@ -38,29 +38,8 @@ const Project = ({ article }) => {
   );
 };
 
-export async function getStaticPaths() {
-  const categories = await fetchAPI("/categories");
-  const projects = categories[3].articles;
 
-  return {
-    paths: projects.map((article) => ({
-      params: {
-        project: article.slug,
-      },
-    })),
-    fallback: false,
-  };
-}
 
-export async function getStaticProps({ params }) {
-  const articles = await fetchAPI(
-    `/articles?slug=${params.project}&status=published`
-  );
 
-  return {
-    props: { article: articles[0] },
-    revalidate: 1,
-  };
-}
 
 export default Project;

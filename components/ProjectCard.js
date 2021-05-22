@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "./image";
 import Link from "next/link";
+import Moment from "react-moment";
 
 const ProjectCard = ({ title, description, date, img, slug }) => {
   return (
     <div class="overflow-hidden lg:w-4/12 md:w:full m-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
-      <Image class="object-cover w-full h-64" image={img} alt="Article" />
+
 
       <div class="p-6">
         <div>
@@ -38,7 +39,7 @@ const ProjectCard = ({ title, description, date, img, slug }) => {
               </a>
             </div>
             <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">
-              {date}
+              <Moment fromNow></Moment>
             </span>
           </div>
         </div>

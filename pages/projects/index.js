@@ -9,11 +9,11 @@ const ProjectPage = ({ categories }) => {
       {projects.map((article) => {
         return (
           <ProjectCard
-            title={article.title}
-            description={article.description}
-            date={article.publishedAt}
-            img={article.image}
-            slug={article.slug}
+            title={article.Title}
+            description={article.Description}
+            date={article.PublishedAt}
+            img={article.Image}
+            slug={article.Slug}
           />
         );
       })}
@@ -23,7 +23,9 @@ const ProjectPage = ({ categories }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const categories = await fetchAPI("/categories");
+  const [categories] = await Promise.all([
+    fetchAPI("/categories"),
+  ]);
 
   return {
     props: { categories },
