@@ -18,16 +18,6 @@ const guides = [
     alt: "css",
   },
   {
-    name: "MongoDB",
-    src: "/mongodb.gif",
-    alt: "javascript",
-  },
-  {
-    name: "Express",
-    src: "/express.png",
-    alt: "express",
-  },
-  {
     name: "React",
     src: "/react.png",
     alt: "react",
