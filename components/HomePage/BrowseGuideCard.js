@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BrowseGuideCard = ({ guide }) => {
   return (
-    <div className="w-60 mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 m-5">
+    <div className="w-60 mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 mb-4">
       <Image
         className="object-cover w-full h-56"
         src={guide.src}

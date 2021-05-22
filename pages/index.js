@@ -189,7 +189,7 @@ const Home = ({ articles }) => {
         <section className="bg-gray-100 dark:bg-gray-900  ">
           <div className="container mx-auto lg:flex lg:justify-center flex flex-col px-6 pb-6">
             <div className="py-6">
-              <h2 className=" underline text-3xl font-bold text-gray-800">
+              <h2 className="underline text-3xl font-bold text-gray-800">
                 Latest Posts
               </h2>
             </div>
