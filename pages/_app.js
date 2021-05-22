@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import App from "next/app";
 import "tailwindcss/tailwind.css";
 
 import Layout from "../components/layout/Layout";
 import { createContext } from "react";
-import { fetchAPI } from "../lib/api";
 import * as gtag from "../lib/gtag";
 
 // Store Strapi Global object in context
@@ -38,7 +36,5 @@ function MyApp({ Component, pageProps }) {
     </GlobalContext.Provider>
   );
 }
-
-
 
 export default MyApp;
