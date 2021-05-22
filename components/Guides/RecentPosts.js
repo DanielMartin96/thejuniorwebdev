@@ -15,7 +15,7 @@ const RecentPosts = ({ category }) => {
         </Link>
       </div>
       <hr />
-      <div className="mt-4 flex justify-start">
+      <div className="mt-4 flex flex-wrap justify-center">
         {category.articles.map((article) => (
           <ArticleCard article={article} />
         ))}

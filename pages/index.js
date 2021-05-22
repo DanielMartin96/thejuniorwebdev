@@ -181,7 +181,7 @@ const Home = ({ articles }) => {
           </div>
         </div>
 
-        <section className=" container mx-auto flex flex-wrap lg:py-12 lg:flex">
+        <section className="py-6 flex flex-wrap lg:py-12 lg:flex">
           {guides.map((guide) => (
             <BrowseGuideCard guide={guide} key={guide.name} />
           ))}
