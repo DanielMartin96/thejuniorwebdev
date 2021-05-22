@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const BrowseGuideCard = ({ guide }) => {
   return (
-    <div className="max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 mb-4">
+    <div className="max-w-sm mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 mb-4">
       <Image
         className="object-cover w-full h-56"
         src={guide.src}
