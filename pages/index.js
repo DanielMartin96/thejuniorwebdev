@@ -4,6 +4,7 @@ import Image from "next/image";
 import BrowseGuideCard from "../components/HomePage/BrowseGuideCard";
 import ArticleCard from "../components/HomePage/ArticleCard";
 import { fetchAPI } from "../lib/api";
+import Link from "next/link";
 
 const guides = [
   {
@@ -188,12 +189,18 @@ const Home = ({ articles }) => {
 
         <section className="bg-gray-100 dark:bg-gray-900  ">
           <div className="container mx-auto lg:flex lg:justify-center flex flex-col px-6 pb-6">
-            <div className="py-6">
-              <h2 className="underline text-3xl font-bold text-gray-800">
+            <div className="py-6 flex">
+              <h2 className="mr-4 text-3xl font-bold text-gray-800">
                 Latest Posts
               </h2>
+              <Link href="/guides">
+                <button class="px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-600 rounded-md dark:bg-gray-800 hover:bg-indigo-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-indigo-500 dark:focus:bg-gray-700">
+                  See All
+                </button>
+              </Link>
             </div>
-            <div className="flex flex-wrap">
+            <hr />
+            <div className="flex flex-wrap mt-6">
               {articles
                 .slice(Math.max(articles.length - 3, 0))
                 .reverse()

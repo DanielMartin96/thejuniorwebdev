@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const BrowseGuideCard = ({ guide }) => {
   return (
@@ -13,15 +14,16 @@ const BrowseGuideCard = ({ guide }) => {
       />
 
       <div className="py-5 text-center">
-        <a
-          href={`/guide${guide.src}`}
-          className="block text-2xl font-bold text-gray-800 dark:text-white"
-        >
-          {guide.name}
-        </a>
-        <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
-          Browse Guides
-        </button>
+        <Link href={`/guides/${guide.alt}`}>
+          <p className="block cursor-pointer text-2xl font-bold text-gray-800 dark:text-white">
+            {guide.name}
+          </p>
+        </Link>
+        <Link href={`/guides/${guide.alt}`}>
+          <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+            Browse Guides
+          </button>
+        </Link>
       </div>
     </div>
   );

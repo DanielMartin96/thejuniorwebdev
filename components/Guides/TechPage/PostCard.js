@@ -2,7 +2,6 @@ import React from "react";
 import Moment from "react-moment";
 
 const PostCard = ({ article }) => {
-  console.log(article);
   return (
     <div class="mb-6 max-w-xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
       <img
