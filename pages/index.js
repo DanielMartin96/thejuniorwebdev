@@ -60,7 +60,7 @@ const Home = ({ articles }) => {
           </div>
         </div>
 
-        <section className="py-6 flex flex-wrap justify-center lg:py-12 lg:flex">
+        <section className="py-6 flex flex-wrap justify-evenly">
           {guides.map((guide) => (
             <BrowseGuideCard guide={guide} key={guide.name} />
           ))}
