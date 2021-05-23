@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
                   Guides
                 </a>
               </Link>
-              <Link href="/projects">
+              <Link href="/guides/project">
                 <a className="my-1 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0">
                   Projects
                 </a>
@@ -72,8 +72,7 @@ const Layout = ({ children }) => {
                 </div>
 
                 <p className="max-w-md mt-2 text-gray-500 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reiciendis, nisi! Id.
+                  Beginner tutorials in JavaScript, the MERN stack and CSS.
                 </p>
 
                 <div className="flex mt-4 -mx-2">
@@ -112,6 +111,7 @@ const Layout = ({ children }) => {
 
             <div className="mt-6 lg:mt-0 lg:flex-1">
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+                <div></div>
                 <div>
                   <h3 className="text-gray-700 uppercase dark:text-white">
                     About
@@ -120,19 +120,7 @@ const Layout = ({ children }) => {
                     href="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Company
-                  </a>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    community
-                  </a>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    Careers
+                    Who am I?
                   </a>
                 </div>
 
@@ -144,43 +132,13 @@ const Layout = ({ children }) => {
                     href="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Tec
+                    Guides
                   </a>
                   <a
                     href="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Music
-                  </a>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    Videos
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    Products
-                  </h3>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    Mega cloud
-                  </a>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    Aperion UI
-                  </a>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    Meraki UI
+                    Projects
                   </a>
                 </div>
 
@@ -188,12 +146,12 @@ const Layout = ({ children }) => {
                   <h3 className="text-gray-700 uppercase dark:text-white">
                     Contact
                   </h3>
-                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                    +1 526 654 8965
-                  </span>
-                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                    example@email.com
-                  </span>
+                  <a
+                    href="#"
+                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                  >
+                    thejuniorwebdev@gmail.com
+                  </a>
                 </div>
               </div>
             </div>

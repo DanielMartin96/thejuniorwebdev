@@ -22,6 +22,11 @@ const guides = [
     src: "/react.png",
     alt: "react",
   },
+  {
+    name: "MERN",
+    src: "/mern.jpeg",
+    alt: "mern",
+  },
 ];
 
 const Home = ({ articles }) => {
@@ -38,124 +43,8 @@ const Home = ({ articles }) => {
             <div className=" w-full md:w-1/2">
               <div className="max-w-lg">
                 <h1 className="text-2xl font-medium tracking-wide text-gray-800 dark:text-white md:text-4xl">
-                  Beginner tutorials in HTML, CSS, JavaScript, React and
-                  Wordpress.
+                  Beginner tutorials in JavaScript, the MERN stack and CSS.
                 </h1>
-                <div className="grid gap-6 mt-8 sm:grid-cols-2">
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>JavaScript</span>
-                  </div>
-
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>CSS</span>
-                  </div>
-
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>MongoDB</span>
-                  </div>
-
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>Express</span>
-                  </div>
-
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>React</span>
-                  </div>
-
-                  <div className="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
-                    <svg
-                      className="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-
-                    <span>Node.js</span>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -171,7 +60,7 @@ const Home = ({ articles }) => {
           </div>
         </div>
 
-        <section className="py-6 flex flex-wrap lg:py-12 lg:flex">
+        <section className="py-6 flex flex-wrap justify-center lg:py-12 lg:flex">
           {guides.map((guide) => (
             <BrowseGuideCard guide={guide} key={guide.name} />
           ))}
@@ -213,7 +102,8 @@ const Home = ({ articles }) => {
                   Hello, my name is Dan and i'm a Junior Developer based in the
                   UK. This website will be full of helpful tutorials and posts
                   about the latest tech trends, helping you getting a kickstart
-                  in a career i'm so passionate about.
+                  in a career i'm so passionate about. My favourite tech is
+                  React so expect lots of content about it!
                 </p>
 
                 <div className="flex items-center mt-6 -mx-2">
