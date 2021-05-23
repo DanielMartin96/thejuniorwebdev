@@ -1,7 +1,6 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const ArticleCard = ({ article }) => {
-  console.log(article.categories);
   return (
     <div class="w-full max-w-sm px-4 py-3 mx-auto mb-4  bg-white rounded-md shadow-md dark:bg-gray-800">
       <div class="flex items-center justify-end">
@@ -25,7 +24,7 @@ const ArticleCard = ({ article }) => {
           {article.description.substring(0, 200) + "..."}
         </p>
 
-        <Link href={`/guides/${article.categories[0]}/${article.slug}`}>
+        <Link href={`/guides/${article.category}/${article.slug}`}>
           <button class="px-4 py-2 my-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-600 rounded-md dark:bg-gray-800 hover:bg-indigo-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-indigo-500 dark:focus:bg-gray-700">
             Read More
           </button>
