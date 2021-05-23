@@ -112,6 +112,7 @@ const Layout = ({ children }) => {
             <div className="mt-6 lg:mt-0 lg:flex-1">
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
                 <div></div>
+                <div></div>
                 <div>
                   <h3 className="text-gray-700 uppercase dark:text-white">
                     About
@@ -139,18 +140,6 @@ const Layout = ({ children }) => {
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
                     Projects
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    Contact
-                  </h3>
-                  <a
-                    href="#"
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  >
-                    thejuniorwebdev@gmail.com
                   </a>
                 </div>
               </div>
