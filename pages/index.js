@@ -48,7 +48,7 @@ const Home = ({ articles }) => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center w-full h-96 md:w-1/2">
+            <div className="flex items-center justify-center w-full md:w-1/2">
               <Image
                 className="object-cover w-full h-full max-w-2xl rounded-md"
                 src="/programming.jpg"
