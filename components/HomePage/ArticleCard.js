@@ -20,7 +20,7 @@ const ArticleCard = ({ article }) => {
         <h1 class="mt-2 text-lg font-semibold text-gray-800 dark:text-white">
           {article.title}
         </h1>
-        <p class="my-2 text-sm text-gray-600 dark:text-gray-300">
+        <p class="my-2 text-sm text-gray-600">
           {article.description.substring(0, 200) + "..."}
         </p>
 
