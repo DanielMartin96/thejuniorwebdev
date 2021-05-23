@@ -3,5 +3,8 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/guides/[tech]": "pages/guides/[tech].js",
-  "/guides": "pages/guides.js"
+  "/guides/[tech]/[slug]": "pages/guides/[tech]/[slug].js",
+  "/": "pages/index.js",
+  "/guides": "pages/guides.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }

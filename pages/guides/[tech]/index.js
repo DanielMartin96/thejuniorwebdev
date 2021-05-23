@@ -18,7 +18,7 @@ const TechPage = ({ category }) => {
       <hr />
       <div className="flex flex-wrap mt-4">
         {category.articles.map((article) => (
-          <PostCard article={article} key={article.name} />
+          <PostCard article={article} key={article.name} tech={category.name} />
         ))}
       </div>
     </div>
