@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const BrowseGuideCard = ({ guide }) => {
   return (
-    <div className="max-w-xs m-8 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+    <div className="w-64 m-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
       <Image
         className="object-cover w-full h-56"
         src={guide.src}
         alt={guide.alt}
-        height="200px"
-        width="250px"
+        height="auto"
+        width="auto"
       />
 
       <div className="py-5 text-center">
