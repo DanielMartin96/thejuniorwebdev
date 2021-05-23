@@ -9,8 +9,8 @@ const BrowseGuideCard = ({ guide }) => {
         className="object-cover w-full h-56"
         src={guide.src}
         alt={guide.alt}
-        height="426"
-        width="640"
+        height="300px"
+        width="400px"
       />
 
       <div className="py-5 text-center">
