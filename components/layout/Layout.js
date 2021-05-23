@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
               >
                 <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                   ></path>
                 </svg>
@@ -146,10 +146,10 @@ const Layout = ({ children }) => {
             </div>
           </div>
 
-          <hr class="h-px my-6 bg-gray-300 border-none dark:bg-gray-700" />
+          <hr className="h-px my-6 bg-gray-300 border-none dark:bg-gray-700" />
 
           <div>
-            <p class="text-center text-gray-800 dark:text-white">
+            <p className="text-center text-gray-800 dark:text-white">
               © thejuniorwebdev
             </p>
           </div>

@@ -10,7 +10,7 @@ const TechPage = ({ category }) => {
           {category.name}
         </h1>
         <Link href="/guides">
-          <button class="px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-600 rounded-md dark:bg-gray-800 hover:bg-indigo-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-indigo-500 dark:focus:bg-gray-700">
+          <button className="px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-600 rounded-md dark:bg-gray-800 hover:bg-indigo-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-indigo-500 dark:focus:bg-gray-700">
             Back
           </button>
         </Link>
@@ -18,7 +18,7 @@ const TechPage = ({ category }) => {
       <hr />
       <div className="flex flex-wrap mt-4">
         {category.articles.map((article) => (
-          <PostCard article={article} />
+          <PostCard article={article} key={article.name} />
         ))}
       </div>
     </div>
